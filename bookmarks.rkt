@@ -1,5 +1,8 @@
 #lang racket
+(require "database.rkt")
+(require "bmrkdef.rkt")
 
+#|
 (struct tag (name) #:transparent)
 
 (struct bookmark (title url tags comment) #:transparent)
@@ -16,6 +19,7 @@
 
 (define (t tl)
   tl)
+ |#
 
 (define (html-bookmark bmrk)
   (string-append "<a href=\"" (bookmark-url bmrk) "\">"
@@ -44,7 +48,7 @@
   (close-output-port out))
 
 (define (generate)
-  
+#|  
   (b "Ursula K. Le Guin" (u "https://www.ursulakleguin.com/home/") '(watchdog ❤) "web home")
   (b "Category Theory" (u "https://plato.stanford.edu/entries/category-theory/") '(sep category-theory cs) "")
   (b "dmitry.gr"(u "https://dmitry.gr") '(electronics re blog watchdog) "")
@@ -56,9 +60,10 @@
   (b "How to Flash ESP-01 Firmware to the Improved SDK v2.0.0" (u "https://www.allaboutcircuits.com/projects/flashing-the-ESP-01-firmware-to-SDK-v2.0.0-is-easier-now/") '(electronics howto) "")
   (b "Category Theory: Lecture Notes And Online Books" (u "https://www.logicmatters.net/categories/") '(cs category-theory) "")
   (b "Terminal and initial objects 1" (u "https://youtu.be/yeQcmxM2e5I") '(cs category-theory video) "")
-  (b "Category theory for the working hacker by Philip Wadler " (u "https://youtu.be/V10hzjgoklA") '(cs category-theory video ❤) "")
-
-
+  (b
+ "Category theory for the working hacker by Philip Wadler " (u "https://youtu.be/V10hzjgoklA") '(cs category-theory video ❤) "")
+  |#
+  (load-db)
   (export
    "readme.md"
    ; "bookmarks.html"
