@@ -38,6 +38,7 @@
   
   (b "Ursula K. Le Guin" (u "https://www.ursulakleguin.com/home/") '(watchdog ❤))
   (b "Category Theory" (u "https://plato.stanford.edu/entries/category-theory/") '(sep category-theory cs))
+  (b "dmitry.gr"(u "https://dmitry.gr") '(electronics re blog watchdog))
 
   (export
    (string-append "<html lang='en'><head> <meta charset='utf-8' /><meta name='viewport' content='width=device-width, initial-scale=1' /><title>My Bookmarks</title></head><body>"
