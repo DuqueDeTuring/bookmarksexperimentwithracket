@@ -4,7 +4,7 @@
 (provide load-db)
 
 (define (load-db)
-    (b “SETTING UP POSTGRESQL STREAMING REPLICATION” (u “https://www.cybertec-postgresql.com/en/setting-up-postgresql-streaming-replication/”) ‘(howto postgres) “”)
+    (b "SETTING UP POSTGRESQL STREAMING REPLICATION" (u "https://www.cybertec-postgresql.com/en/setting-up-postgresql-streaming-replication/") '(howto postgres) "")
   (b "Ursula K. Le Guin" (u "https://www.ursulakleguin.com/home/") '(watchdog ❤) "web home")
   (b "Category Theory" (u "https://plato.stanford.edu/entries/category-theory/") '(sep category-theory cs) "")
   (b "dmitry.gr"(u "https://dmitry.gr") '(electronics re blog watchdog) "")

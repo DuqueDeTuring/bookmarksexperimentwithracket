@@ -12,3 +12,4 @@
  * [dmitry.gr](https://dmitry.gr)
  * [Category Theory](https://plato.stanford.edu/entries/category-theory/)
  * [Ursula K. Le Guin](https://www.ursulakleguin.com/home/)
+ * [SETTING UP POSTGRESQL STREAMING REPLICATION](https://www.cybertec-postgresql.com/en/setting-up-postgresql-streaming-replication/)
