@@ -4,6 +4,12 @@
 (provide load-db)
 
 (define (load-db)
+  (b "BGP View" (u "https://bgpview.io/") '(internet data) "information about ASNs, for example: https://bgpview.io/asn/11830")
+  (b "Hurricane Electric Internet Services" (u "https://bgp.he.net/exchange/CRIX") '(internet data) ":)")
+  (b "Internet Exchange Point Datasets" (u "https://www.pch.net/ixp/data") '(internet data) "")
+  (b "CAIDA Internet eXchange Points (IXPs) Dataset" (u "https://www.caida.org/data/ixps/") '(internet data) "")
+  (b "University of Oregon Route Views Project" (u "http://www.routeviews.org/routeviews/") '(internet bgp information) "")
+  (b "Anatomy of Modules in Go" (u "https://medium.com/rungo/anatomy-of-modules-in-go-c8274d215c16") '(go) "")
   (b "CH340 driver" (u "https://cdn.sparkfun.com/assets/learn_tutorials/5/9/7/") '(sofware electronics) "")
   (b "Getting Started with ESP8266 (ESP-01) module | How to program ESP-01 module" (u "https://www.youtube.com/watch?v=uqx2Z4bWjOs") '(video electronics howto) "")
   (b "ESP8266 Serial WIFI Module" (u "https://www.itead.cc/wiki/ESP8266_Serial_WIFI_Module") '(electronics specs) "at commands, schematics")
