@@ -1,5 +1,5 @@
 #lang racket
-(provide b u bookmark-url bookmark-title bookmarks tags-table tag-name tag-bks) 
+(provide b u bookmark-url bookmark-title bookmark-tags bookmarks tags-table tag-name tag-bks) 
 
 
 
