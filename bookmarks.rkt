@@ -16,7 +16,8 @@
 
 
 (define (md-bookmark bmrk)
-  (string-append "[" (bookmark-title bmrk) "](" (bookmark-url bmrk) ")" ))
+  (string-append "[" (bookmark-title bmrk) "](" (bookmark-url bmrk) ")"
+                 "[gotag](#go)"))
   
 (define (md-bookmarks bmrks)
   (define per-tag
