@@ -2,25 +2,6 @@
 (require "database.rkt")
 (require "bmrkdef.rkt")
 
-#|
-(struct tag (name) #:transparent)
-
-(struct bookmark (title url tags comment) #:transparent)
-
-(define bookmarks '())
-
-
-(define (b title url tags comment)
-  (define newbk (bookmark title url (map tag tags) comment))
-  (set! bookmarks (cons newbk bookmarks)))
-
-(define (u a)
-  a)
-
-(define (t tl)
-  tl)
- |#
-
 (define (html-bookmark bmrk)
   (string-append "<a href=\"" (bookmark-url bmrk) "\">"
                  (bookmark-title bmrk)
@@ -40,24 +21,16 @@
 (define (md-bookmarks bmrks)
   (define per-tag
     (map (lambda (t)
-           ;(define tname (hash-ref tags-table t))
            (string-join (cons (string-append "## " (symbol->string t) "\n")
                           (map (lambda (item)
                                  (string-append "* " item "\n"))
                                (map md-bookmark (hash-ref tags-table t))))))
            
-         ; ))
-         (hash-keys tags-table)
-         ;'(howto)
-         ))
-  
-  #|(string-join (map (lambda (item)
-                      (string-append "* " item "\n"))
-                    (map md-bookmark bmrks))
-               per-tag)|#
-               
-  per-tag
-  )
+         (sort (hash-keys tags-table)
+               (lambda (a b)
+                 (string<? (symbol->string a)
+                           (symbol->string b))))))
+  per-tag)
 
 (define (export filename data)
   (define out (open-output-file filename #:exists 'replace))
@@ -75,5 +48,4 @@
    ;                  (html-bookmarks bookmarks)
    ;                  "</body></html>")
    (string-join (cons "# My bookmarks\n\n "
-                   (md-bookmarks bookmarks)))
-   ))
+                   (md-bookmarks bookmarks)))))
