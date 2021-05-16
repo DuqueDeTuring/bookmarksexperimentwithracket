@@ -4,6 +4,8 @@
 (provide load-db)
 
 (define (load-db)
+
+(b “Category Theory, The essence of interface-based design - Erik Meijer” (u “https://m.youtube.com/watch?v=JMP6gI5mLHc”) '(cs category-theory video) “”)
   (b "BGP View" (u "https://bgpview.io/") '(internet data) "information about ASNs, for example: https://bgpview.io/asn/11830")
   (b "Hurricane Electric Internet Services" (u "https://bgp.he.net/exchange/CRIX") '(internet data) ":)")
   (b "Internet Exchange Point Datasets" (u "https://www.pch.net/ixp/data") '(internet data) "")
