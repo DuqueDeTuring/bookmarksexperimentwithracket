@@ -16,7 +16,7 @@
 
 
 (define (md-bookmark bmrk)
-  (string-append "[" (bookmark-title bmrk) "](" (bookmark-url bmrk) ") tags:"
+  (string-append "[" (bookmark-title bmrk) "](" (bookmark-url bmrk) ") **tags:** "
                  (string-join (map (lambda (t)
                         (define name (symbol->string (tag-name t)))
                         (string-append "[" name "](#" name ")"))
